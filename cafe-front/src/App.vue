@@ -22,16 +22,16 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
     <div class="menu" v-show="active">
       <ul>
-        <li><a href="#menu" @click="toggleMenu">メニュー</a></li>
-        <li><a href="#product" @click="toggleMenu">おすすめ</a></li>
-        <li><a href="#company" @click="toggleMenu">ミッション</a></li>
-        <li><a href="#news" @click="toggleMenu">お問い合わせ</a></li>
+        <li><a href="#" @click="toggleMenu">メニュー</a></li>
+        <li><a href="#" @click="toggleMenu">おすすめ</a></li>
+        <li><a href="#" @click="toggleMenu">ミッション</a></li>
+        <li><a href="#" @click="toggleMenu">マッチング</a></li>
       </ul>
     </div>
   </header>
   <!-- その他のコンテンツ -->
   <main>
-    
+    <!-- ... -->
   </main>
 </template>
 
