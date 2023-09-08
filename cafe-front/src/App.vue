@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import MenuIndex from './components/MenuIndex.vue'
 // import HelloWorld from './components/HelloWorld.vue'
 </script>
 
@@ -31,7 +32,8 @@ import { RouterLink, RouterView } from 'vue-router'
   </header>
   <!-- その他のコンテンツ -->
   <main>
-    
+    <!-- <h2>Hello World!</h2> -->
+    <MenuIndex/>
   </main>
 </template>
 
@@ -50,6 +52,7 @@ export default {
 }
 </script>
 <style>
+/* ヘッダー */
 header {
   display: flex;
   justify-content: space-between;
@@ -102,5 +105,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* メインコンテンツ */
+main {
+  text-align: center;
+  margin-top: 10px;
+  border-top: 2px solid #a5a5a5;
 }
 </style>
