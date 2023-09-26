@@ -21,7 +21,6 @@
 </template>
 
 <script>
-import { getMenuList } from '@/api/menu';
 import axios from 'axios'
 
 export default {
