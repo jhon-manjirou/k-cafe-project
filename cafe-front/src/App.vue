@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import MenuIndex from './components/MenuIndex.vue'
+// import MatchEvent from './components/MatchEvent.vue'
+// import HelthProfile from './components/HelthProfile.vue'
 // import HelloWorld from './components/HelloWorld.vue'
 </script>
 
@@ -9,7 +10,7 @@ import MenuIndex from './components/MenuIndex.vue'
   <header>
     <!-- ロゴ部分 -->
     <div class="logo">
-      <a href="#"><img src="@/assets/images/umaii-icon.png" alt="umaii-icon" /><img src="@/assets/images/umaii-logo.png" alt="umaii-icon" /></a>
+      <RouterLink to="/"><img src="@/assets/images/umaii-icon.png" alt="umaii-icon" /><img src="@/assets/images/umaii-logo.png" alt="umaii-icon" /></RouterLink>
     </div>
     <!-- 右部分: ログインボタンとハンバーガーメニュー -->
     <div class="right-section">
@@ -23,17 +24,18 @@ import MenuIndex from './components/MenuIndex.vue'
     </div>
     <div class="menu" v-show="active">
       <ul>
-        <li><a href="#" @click="toggleMenu">メニュー</a></li>
-        <li><a href="#" @click="toggleMenu">おすすめ</a></li>
-        <li><a href="#" @click="toggleMenu">ミッション</a></li>
-        <li><a href="#" @click="toggleMenu">マッチング</a></li>
+        <li><RouterLink  to="/menu" @click="toggleMenu">メニュー</RouterLink></li>
+        <li><RouterLink  to="/event" @click="toggleMenu">イベント</RouterLink></li>
+        <li><a class="not-develop" href="#" @click="toggleMenu">プロフィール</a></li>
+        <li><a class="not-develop" href="#" @click="toggleMenu">マッチング</a></li>
       </ul>
     </div>
   </header>
   <!-- その他のコンテンツ -->
   <main>
-    <!-- <h2>Hello World!</h2> -->
-    <MenuIndex/>
+    <RouterView/>
+    <!-- <MenuIndex/> -->
+    <!-- <HelthProfile/> -->
   </main>
 </template>
 
@@ -106,10 +108,18 @@ header {
   justify-content: center;
   align-items: center;
 }
+.menu li {
+  line-height: 150%;
+  border-bottom: #45A049;
+  font-size: 32px;
+}
+.not-develop{
+  text-decoration-line: line-through;
+}
 /* メインコンテンツ */
 main {
   text-align: center;
   margin-top: 10px;
-  border-top: 2px solid #a5a5a5;
+  /* border-top: 2px solid #a5a5a5; */
 }
 </style>

@@ -1,10 +1,10 @@
 <script setup>
 // import TheWelcome from '../components/TheWelcome.vue'
-import HeyGuys from '../components/HeyGuys.vue'
+import TopLayout from '../components/TopLayout.vue'
 </script>
 
 <template>
   <main>
-    <HeyGuys />
+    <TopLayout />
   </main>
 </template>
